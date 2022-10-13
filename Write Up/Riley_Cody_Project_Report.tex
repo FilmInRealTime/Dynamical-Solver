@@ -1,0 +1,68 @@
+\documentclass[12pt]{report}
+\usepackage{amsmath, amssymb, amscd, amsthm, amsfonts}
+\usepackage{bookmark}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+% \usepackage[hyphens]{url}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{pgf}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{titlesec}
+\usepackage{mdframed}
+\usepackage[shortlabels]{enumitem}
+\usepackage{indentfirst}
+\usepackage{float}
+\usepackage[vertfit]{breakurl}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{booktabs}
+\usepackage{xltabular}
+\usepackage[backend=biber]{biblatex} 
+\addbibresource{references.bib}
+
+
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+
+ \linespread{1.5}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\textbf{Cody Riley}}
+\lhead{\textbf{Mathematics Project}}
+\rfoot{Page \thepage}
+
+\title{Solving Dynamical Systems in Python}
+\author{Cody Riley}
+\date{8/10/2022}
+
+\begin{document}
+\maketitle
+\newpage
+\chapter{The Development Phase}
+\section{Stages of Development}
+The development process of my dynamical system solver was relatively straightforward in the early stages of development. The first stage of development was to build a solid plan for what I planned to make. As discussed in my statement of intent, I wanted to develop an easy-to-use piece of software that would allow any user to input a set of first-order differential equations and have the python script approximate a solution to the corresponding dynamical system. In the early stages of planning, I thought it would be good to allow the user to input how many equations they would like to include in the solver. However, although the final build allows this to occur, it is more likely for bugs to occur, and the app becomes very tedious to use.
+\smallskip
+
+At first, I thought building such a program would be relatively straightforward, and I assumed I would have no issues. However, it proved more difficult than I anticipated, as I had to ensure that the correct number of equations were being generated alongside the number of variables. The name of the variables was also a challenge, and for simplicity, during the early stages of development, I decided to use the variable naming convention of $x_{n}$, where $n \in \mathbb{Z}^{+}$.
+\section{Positive Outcomes}
+\section{Challenging Parts of Development}
+\section{Future Developments for the Project}
+
+\section{How to Use the Application}
+
+
+
+
+
+
+\end{document}
