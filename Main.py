@@ -116,10 +116,10 @@ def eulers_method(x0,t,h,en,id,variables):
 
 
 
-def plot_solution(t,x,j):
+def plot_solution(t,x):
     """This function plots the information that the user would like to know"""
-    dimension = int(check_numeric("How many dimensions would you like to plot,2 or 3: ",1))
-
+    plt.plot(t,x)
+    plt.show()
 
 
 
@@ -143,8 +143,7 @@ def main():
     h = 1/(1+intervals)
     t = np.linspace(lower_bound,upper_bound,intervals)
     x = odeint(f,initia_vec,t, args=(input_derivative,equation_names,variables))
-    plt.plot(t,x)
-    plt.show()
+    plot_solution(t,x,variables,equation_names)
 
 main()
 
