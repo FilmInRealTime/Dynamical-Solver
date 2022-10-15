@@ -68,6 +68,7 @@ def check_numeric(string, j):
                 is_numeric = False
                 print("Please enter an float")
         else:
+            
             try:
                 user_value = int(read_string(string))
                 is_numeric = True
@@ -144,6 +145,4 @@ def main():
     t = np.linspace(lower_bound,upper_bound,intervals)
     x = odeint(f,initia_vec,t, args=(input_derivative,equation_names,variables))
     plot_solution(t,x,variables,equation_names)
-
-main()
 
