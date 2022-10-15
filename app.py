@@ -2,6 +2,8 @@ from cgitb import text
 from tkinter import *
 #We call the file GUI_main python script into our GUI interface so we can solve our ODEs.
 import GUI_main as mn
+from matplotlib.figure import Figure
+from matplotlib.backends.backend_tkagg import (FigureCanvasTkAgg, NavigationToolbar2Tk)
 #Calls the functionality from the main file into the GUI
 
 #This version aims to allows the user to input their 1-D differential equation and apply Euler's method to approximate the solution of the DE at a point of the user's choice
@@ -19,11 +21,22 @@ def print_statement():
     ic3 = initial_3.get()
     #We combine the initial conditions for the problems we wish solve, matching the position in the list to the cooresponding equation
     initial_conditions = [ic1,ic2,ic3]
-    mn.main(equations,initial_conditions)
     #Temporary test to ensure all fields are being grabbed
     print(f"Equation: {f_eqn1} with x1 = {ic1}")
     print(f"Equation: {f_eqn2} with x2 = {ic2}")
     print(f"Equation: {f_eqn3} with x3 = {ic3}")
+    x,t = mn.main(equations,initial_conditions)
+    
+    fig = Figure(figsize=(8,5), dpi = 100)
+
+    plot1 = fig.add_subplot(111)
+    plot1.set_xlabel("t")
+    plot1.set_ylabel("Solution")
+    plot1.set_title("Approximate solution to the Dynamical System")
+    plot1.plot(t,x)
+    canvas = FigureCanvasTkAgg(fig, master = display_app)    
+    canvas.draw()
+    canvas.get_tk_widget().pack()
 
 
 display_app = Tk()
@@ -77,6 +90,8 @@ inital_con3 = Entry(frame,width = 10,textvariable= initial_3)
 inital_con3.grid(row = 2, column= 3)
 
 Button(frame, text = 'Solve Dynamical System', command = print_statement).grid(row = 3, columnspan=4,sticky='ew')
+Button(frame, text = 'Add Equation', command = print_statement).grid(row = 4, columnspan=4,sticky='ew')
+
 
 
 

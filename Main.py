@@ -143,7 +143,7 @@ def main():
     h = 1/(1+intervals)
     t = np.linspace(lower_bound,upper_bound,intervals)
     x = odeint(f,initia_vec,t, args=(input_derivative,equation_names,variables))
-    plot_solution(t,x,variables,equation_names)
+    plot_solution(t,x)
 
 main()
 

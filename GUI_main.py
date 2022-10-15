@@ -8,17 +8,10 @@ def DE_formation():
     """This function takes the users input and puts it into a form so we can change how many
     equations we consider."""
     num_equation = 3
-    
-    if num_equation > 3:
-        print('Are you sure you would like to solve such a big system? The application is made for 3 or less systems.')
 
-    while num_equation <= 0:
-        num_equation = int(input("Oops, you can't have a negative number of equations, please enter a valid input:"))
-
-
-    lower_bound, upper_bound = solving_bounded(num_equation)
+    lower_bound = 0
+    upper_bound = 5
     j = 0
-    equations = []
     variables  = []
     equation_names = []
     print(f"You are solving a dynamical system with {num_equation} equations. Your variables have the form x = (t,x1,...xn), where n is the number of equations you wish to solve for.")
@@ -27,28 +20,12 @@ def DE_formation():
 
     while j < num_equation:
         j += 1
-        temp_equation = read_string(f"Type you're derivative here. f{j}(x) =  ")
-        equations.append(temp_equation)
         variables.append("x{0}".format(j))
         equation_names.append("dx{0}dt".format(j))
         
     print(f"Your differential equations are named {equation_names}")
-    initial_vec = initial_values(j)
-    return equations, initial_vec,lower_bound,upper_bound, variables, equation_names
+    return lower_bound,upper_bound, variables, equation_names
 
-def initial_values(j):
-    """This function forms a vector with the initial conditions for our first order differential 
-    equation."""
-    initial_vector = []
-    for i in range(j):
-        initial_vector.append(check_numeric("Please enter your initial value here: ",0))
-    return np.array(initial_vector)
-
-def solving_bounded(j):
-    """This function sets up the bounds in the dimension's we are solving on"""
-    lower_bound = check_numeric("Please enter your lower bound for t here: ",0)
-    upper_bound = check_numeric("Please enter your upper bound for t here: ",0)
-    return lower_bound,upper_bound
     
 
 def check_numeric(string, j):
@@ -119,29 +96,24 @@ def eulers_method(x0,t,h,en,id,variables):
 
 def plot_solution(t,x):
     """This function plots the information that the user would like to know"""
-    plt.plot(t,x)
+    x1 = x[:,0]
+    x2 = x[:,1]
+    x3 = x[:,2]
+
+    plt.plot(t,x1,label = "Solution for x1")
+    plt.plot(t,x2,label = "Solution for x2")
+    plt.plot(t,x3,label = "Solution for x3")
+    plt.legend()
+
     plt.show()
+ 
 
-
-
-def continuity_check():
-    """This function evaluates all inputted functions and determines whether there are any discontinuities, 
-    and stores them. These will be prompted to the user before they choose their domain of integration."""
-
-    #We begin by 
-
-def plot_func():
-    """This function plots the solution either in a time series, or phase portraits."""
-    
-
-def main():
+def main(equations,initial_conditions):
     """The main function wraps all the other define functions into a line of processes"""
-    input_derivative, initia_vec, lower_bound, upper_bound, variables, equation_names = DE_formation()
+    lower_bound, upper_bound, variables, equation_names = DE_formation()
     #Note to self, I think I could simplify this down onto one line and have a list containing the required strings.
-    intervals = int(check_numeric("Please enter the number of steps you would like to take: ",1))
-    method = read_string("Enter the method you would like to use. (Select from Euler's Method, Modified Euler's Method): ")
     #The linspace function from the numpy package defines the grid for which we will be plotting on.
-    h = 1/(1+intervals)
-    t = np.linspace(lower_bound,upper_bound,intervals)
-    x = odeint(f,initia_vec,t, args=(input_derivative,equation_names,variables))
-    plot_solution(t,x)
+    h = 1/(1+66)
+    t = np.linspace(lower_bound,upper_bound,66)
+    x = odeint(f,initial_conditions,t, args=(equations,equation_names,variables))
+    return x,t
