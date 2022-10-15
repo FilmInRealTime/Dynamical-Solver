@@ -7,9 +7,23 @@ import GUI_main as mn
 #This version aims to allows the user to input their 1-D differential equation and apply Euler's method to approximate the solution of the DE at a point of the user's choice
 def print_statement():
     """Displays the equations inputted on the GUI app."""    
-    print(f"Equation: {equation_1.get()} with x1 = {initial_1.get()}")
-    print(f"Equation: {equation_2.get()} with x2 = {initial_2.get()}")
-    print(f"Equation: {equation_3.get()} with x3 = {initial_3.get()}")
+    f_eqn1 = equation_1.get()
+    f_eqn2 = equation_2.get()
+    f_eqn3 = equation_3.get()
+    #We combine the equations into a list that will later be sent to the main function for evaluation.
+    equations = [f_eqn1, f_eqn2,f_eqn3]
+
+    #We grab the inital conditions for the problems that we wish to solve.
+    ic1 = initial_1.get()
+    ic2 = initial_2.get()
+    ic3 = initial_3.get()
+    #We combine the initial conditions for the problems we wish solve, matching the position in the list to the cooresponding equation
+    initial_conditions = [ic1,ic2,ic3]
+    mn.main(equations,initial_conditions)
+    #Temporary test to ensure all fields are being grabbed
+    print(f"Equation: {f_eqn1} with x1 = {ic1}")
+    print(f"Equation: {f_eqn2} with x2 = {ic2}")
+    print(f"Equation: {f_eqn3} with x3 = {ic3}")
 
 
 display_app = Tk()

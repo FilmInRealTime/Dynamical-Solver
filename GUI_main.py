@@ -7,7 +7,7 @@ from sympy import *
 def DE_formation():
     """This function takes the users input and puts it into a form so we can change how many
     equations we consider."""
-    num_equation = check_numeric("How many equations would you like to enter?: ",1)
+    num_equation = 3
     
     if num_equation > 3:
         print('Are you sure you would like to solve such a big system? The application is made for 3 or less systems.')
@@ -144,5 +144,4 @@ def main():
     h = 1/(1+intervals)
     t = np.linspace(lower_bound,upper_bound,intervals)
     x = odeint(f,initia_vec,t, args=(input_derivative,equation_names,variables))
-    plot_solution(t,x,variables,equation_names)
-
+    plot_solution(t,x)
