@@ -1,4 +1,5 @@
 from cgitb import text
+from re import L
 from tkinter import *
 #We call the file GUI_main python script into our GUI interface so we can solve our ODEs.
 import GUI_main as mn
@@ -27,17 +28,20 @@ def print_statement():
     print(f"Equation: {f_eqn3} with x3 = {ic3}")
     x,t = mn.main(equations,initial_conditions)
     
-    fig = Figure(figsize=(8,5), dpi = 100)
 
+    fig = Figure(figsize=(8,5), dpi = 100)
     plot1 = fig.add_subplot(111)
     plot1.set_xlabel("t")
     plot1.set_ylabel("Solution")
     plot1.set_title("Approximate solution to the Dynamical System")
-    plot1.plot(t,x)
-    canvas = FigureCanvasTkAgg(fig, master = display_app)    
+    plot1.plot(t,x[:,0], label ='Solution to x1')
+    plot1.plot(t,x[:,1], label ='Solution to x2')
+    plot1.plot(t,x[:,2], label ='Solution to x3')
+    plot1.legend()
+
+    canvas = FigureCanvasTkAgg(fig, master = display_app)
     canvas.draw()
     canvas.get_tk_widget().pack()
-
 
 display_app = Tk()
 
