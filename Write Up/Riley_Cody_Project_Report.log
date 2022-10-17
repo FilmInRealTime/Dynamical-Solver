@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6) (preloaded format=pdflatex 2021.9.5)  10 OCT 2022 20:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6) (preloaded format=pdflatex 2021.9.5)  18 OCT 2022 09:35
 entering extended mode
-**"c:/Users/codyp/OneDrive - University of Canterbury/2022/University Files/Semester Two/COSC 480/Project/Write Up/Riley_Cody_Project_Report.tex"
-(c:/Users/codyp/OneDrive - University of Canterbury/2022/University Files/Semester Two/COSC 480/Project/Write Up/Riley_Cody_Project_Report.tex
+**"e:/University Files/2022/Dynamical-Solver/Write Up/Riley_Cody_Project_Report.tex"
+(e:/University Files/2022/Dynamical-Solver/Write Up/Riley_Cody_Project_Report.tex
 LaTeX2e <2021-06-01>
 L3 programming layer <2021-06-01> (C:\Program Files\MiKTeX\tex/latex/base\report.cls
 Document Class: report 2021/02/12 v1.4n Standard LaTeX document class
@@ -1050,8 +1050,8 @@ Chapter 1.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.68 \end{document}
-                    [1
+l.61 \begin{equation*}
+                       [1
 
 ]
 
@@ -1061,23 +1061,27 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[2] (Riley_Cody_Project_Report.aux)
+[2]
+Chapter 2.
+[3
+
+] (Riley_Cody_Project_Report.aux)
 Package logreq Info: Writing requests to 'Riley_Cody_Project_Report.run.xml'.
 \openout1 = `Riley_Cody_Project_Report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 30867 strings out of 478864
- 565043 string characters out of 2858518
- 1289563 words of memory out of 3000000
+ 30868 strings out of 478864
+ 564559 string characters out of 2858518
+ 1290563 words of memory out of 3000000
  48294 multiletter control sequences out of 15000+600000
  412492 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 85i,11n,133p,1588b,806s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 85i,11n,133p,1527b,806s stack positions out of 5000i,500n,10000p,200000b,80000s
 <C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Riley_Cody_Project_Report.pdf (3 pages, 90151 bytes).
+Output written on Riley_Cody_Project_Report.pdf (4 pages, 97087 bytes).
 PDF statistics:
- 88 PDF objects out of 1000 (max. 8388607)
- 9 named destinations out of 1000 (max. 500000)
+ 92 PDF objects out of 1000 (max. 8388607)
+ 10 named destinations out of 1000 (max. 500000)
  61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
