@@ -6,10 +6,19 @@ import GUI_main as mn
 from matplotlib.figure import Figure
 from matplotlib.backends.backend_tkagg import (FigureCanvasTkAgg, NavigationToolbar2Tk)
 #Calls the functionality from the main file into the GUI
+plot_status = False
 
+fig = None
+plot1 = None
+display_app = Tk()
+plot_status = False
 #This version aims to allows the user to input their 1-D differential equation and apply Euler's method to approximate the solution of the DE at a point of the user's choice
 def print_statement():
-    """Displays the equations inputted on the GUI app."""    
+    global canvas
+    global plot_status
+    if plot_status == True:
+        clear(canvas)
+    """Displays the equations inputted on the GUI app."""   
     f_eqn1 = equation_1.get()
     f_eqn2 = equation_2.get()
     f_eqn3 = equation_3.get()
@@ -28,7 +37,7 @@ def print_statement():
     print(f"Equation: {f_eqn3} with x3 = {ic3}")
     x,t = mn.main(equations,initial_conditions)
     
-
+    #All the important information for the plot.
     fig = Figure(figsize=(8,5), dpi = 100)
     plot1 = fig.add_subplot(111)
     plot1.set_xlabel("t")
@@ -42,8 +51,14 @@ def print_statement():
     canvas = FigureCanvasTkAgg(fig, master = display_app)
     canvas.draw()
     canvas.get_tk_widget().pack()
+    plot_status = True
 
-display_app = Tk()
+
+def clear(canvas):
+    canvas.get_tk_widget().pack_forget()
+
+
+
 
 #Sets the title of the GUI interface
 display_app.title("Dynamical System Solver")
@@ -60,8 +75,6 @@ initial_2 = StringVar()
 
 equation_3 = StringVar()
 initial_3 = StringVar()
-
-
 
 
 Font = ("Times New Roman", 20, "bold")
@@ -94,7 +107,6 @@ inital_con3 = Entry(frame,width = 10,textvariable= initial_3)
 inital_con3.grid(row = 2, column= 3)
 
 Button(frame, text = 'Solve Dynamical System', command = print_statement).grid(row = 3, columnspan=4,sticky='ew')
-Button(frame, text = 'Add Equation', command = print_statement).grid(row = 4, columnspan=4,sticky='ew')
 
 
 
