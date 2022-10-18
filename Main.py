@@ -119,6 +119,10 @@ def eulers_method(x0,t,h,en,id,variables):
 def plot_solution(t,x):
     """This function plots the information that the user would like to know"""
     plt.plot(t,x)
+    plt.xlabel('t')
+    plt.ylabel('y')
+    plt.grid()
+    plt.title("Plot showing the solution to the system of ODEs")
     plt.show()
 
 
