@@ -80,7 +80,9 @@ initial_3 = StringVar()
 Font = ("Times New Roman", 20, "bold")
 
 #The following code sets up a grid holding the structure the GUI
+
 frame = Frame(display_app)
+#Creates the required input from the user for the first equation
 Label(frame,text = 'Please Enter dx1dt: ',font = Font).grid(row = 0, column=0,sticky = 'w')
 eqn1 = Entry(frame,width = 25, textvariable=equation_1 )
 eqn1.grid(row = 0, column= 1)
@@ -89,7 +91,7 @@ inital_con1 = Entry(frame,width = 10,textvariable= initial_1)
 inital_con1.grid(row = 0, column= 3)
 
 
-
+#Creates the required input from the user for the second equation
 Label(frame,text = 'Please Enter dx2dt: ',font = Font).grid(row = 1, column=0,sticky = 'w')
 eqn2 = Entry(frame,width = 25,textvariable = equation_2)
 eqn2.grid(row = 1, column= 1)
@@ -98,7 +100,7 @@ inital_con2 = Entry(frame,width = 10,textvariable= initial_2)
 inital_con2.grid(row = 1, column= 3)
 
 
-
+#Creates the required input from the user for the third equation
 Label(frame,text = 'Please Enter dx3dt: ',font = Font).grid(row = 2, column=0,sticky = 'w')
 eqn3 = Entry(frame,width = 25,textvariable=equation_3)
 eqn3.grid(row = 2, column= 1)
