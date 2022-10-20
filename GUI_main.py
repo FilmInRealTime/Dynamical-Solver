@@ -60,6 +60,7 @@ def f(v,t,en,id,vars):
     """This function defines the vector and equations being used."""
     print(f"t: {t}, v: {v}, en: {en}, id: {id}, vars: {vars}")
     info = []
+    #This loop goes through and 
     for j in range(len(id)):
         locals()[vars[j]] = v[j]
     for j in range(len(id)):

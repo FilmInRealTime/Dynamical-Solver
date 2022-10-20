@@ -1,5 +1,4 @@
 import numpy as np
-import scipy as sp
 import matplotlib.pyplot as plt
 from scipy.integrate import odeint
 from sympy import *
@@ -91,29 +90,10 @@ def f(v,t,en,id,vars):
     return np.array(info)
 
 
-
 def read_string(string):
     """This function prompts the user to enter the desired information"""
     user_input = input(string)
     return user_input
-
-
-def modified_eulers(x0,t,h,en,id,variables):
-    y = [x0]
-    """This function defines modified euler's method, a method we use to solve first order differential equations."""
-    for i in range(int((1/h) -2)):
-        y.append(y[i] + (h/2)*(f(y[i],t[i],id,en,variables) + f(t[i] + h , y[i] + h*f(t[i],y[i],id,en,variables),id,en,variables)))
-    return y
-
-
-
-def eulers_method(x0,t,h,en,id,variables):
-    y = [x0]
-    """This function defines Euler's method, another method we use to solve first order differential equations"""
-    for i in range(int((1/h) -2)):
-        y.append(y[i] + h*f(y[i], t[i],id,en,variables))
-    return y
-
 
 
 def plot_solution(t,x):
@@ -127,25 +107,12 @@ def plot_solution(t,x):
     plt.grid()
     plt.title("Plot showing the solution to the system of ODEs", size = 20)
     plt.show()
-
-
-
-def continuity_check():
-    """This function evaluates all inputted functions and determines whether there are any discontinuities, 
-    and stores them. These will be prompted to the user before they choose their domain of integration."""
-
-    #We begin by 
-
-def plot_func():
-    """This function plots the solution either in a time series, or phase portraits."""
     
-
 def main():
     """The main function wraps all the other define functions into a line of processes"""
     input_derivative, initia_vec, lower_bound, upper_bound, variables, equation_names = DE_formation()
     #Note to self, I think I could simplify this down onto one line and have a list containing the required strings.
     intervals = int(check_numeric("Please enter the number of steps you would like to take: ",1))
-    method = read_string("Enter the method you would like to use. (Select from Euler's Method, Modified Euler's Method): ")
     #The linspace function from the numpy package defines the grid for which we will be plotting on.
     h = 1/(1+intervals)
     t = np.linspace(lower_bound,upper_bound,intervals)

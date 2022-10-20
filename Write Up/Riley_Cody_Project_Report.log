@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6) (preloaded format=pdflatex 2021.9.5)  20 OCT 2022 14:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.6) (preloaded format=pdflatex 2021.9.5)  20 OCT 2022 16:02
 entering extended mode
 **"e:/University Files/2022/Dynamical-Solver/Write Up/Riley_Cody_Project_Report.tex"
 (e:/University Files/2022/Dynamical-Solver/Write Up/Riley_Cody_Project_Report.tex
@@ -1050,31 +1050,19 @@ Chapter 1.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.61 \begin{equation*}
-                       [1
+l.62 \section*{Example Calculation}
+                                    [1
 
 ]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[2]
-Chapter 2.
-[3
-
-]
-<Demo 4.png, id=36, 1157.7654pt x 643.9257pt>
+<Demo 4.png, id=22, 1157.7654pt x 643.9257pt>
 File: Demo 4.png Graphic file (type png)
 <use Demo 4.png>
-Package pdftex.def Info: Demo 4.png  used on input line 89.
+Package pdftex.def Info: Demo 4.png  used on input line 73.
 (pdftex.def)             Requested size: 416.79523pt x 231.81308pt.
-<demo 1.png, id=38, 432.11438pt x 142.28156pt>
+<demo 1.png, id=24, 432.11438pt x 142.28156pt>
 File: demo 1.png Graphic file (type png)
 <use demo 1.png>
-Package pdftex.def Info: demo 1.png  used on input line 97.
+Package pdftex.def Info: demo 1.png  used on input line 81.
 (pdftex.def)             Requested size: 345.69196pt x 113.8254pt.
 
 
@@ -1084,11 +1072,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[4 <./Demo 4.png>]
-<demo 2.png, id=45, 683.55376pt x 520.19344pt>
+[2 <./Demo 4.png>]
+<demo 2.png, id=32, 683.55376pt x 520.19344pt>
 File: demo 2.png Graphic file (type png)
 <use demo 2.png>
-Package pdftex.def Info: demo 2.png  used on input line 103.
+Package pdftex.def Info: demo 2.png  used on input line 91.
 (pdftex.def)             Requested size: 478.48438pt x 364.13292pt.
 
 
@@ -1098,7 +1086,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[5 <./demo 1.png>]
+[3 <./demo 1.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1106,23 +1094,53 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[6 <./demo 2.png>] (Riley_Cody_Project_Report.aux)
+[4 <./demo 2.png>]
+Chapter 2.
+[5
+
+]
+<Demo 5.png, id=53, 1387.584pt x 700.2963pt>
+File: Demo 5.png Graphic file (type png)
+<use Demo 5.png>
+Package pdftex.def Info: Demo 5.png  used on input line 111.
+(pdftex.def)             Requested size: 485.66168pt x 245.10738pt.
+
+Overfull \hbox (1.96484pt too wide) in paragraph at lines 111--112
+ [][] 
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[6 <./Demo 5.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[7] (Riley_Cody_Project_Report.aux)
 Package logreq Info: Writing requests to 'Riley_Cody_Project_Report.run.xml'.
 \openout1 = `Riley_Cody_Project_Report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 30903 strings out of 478864
- 565058 string characters out of 2858518
- 1291563 words of memory out of 3000000
- 48319 multiletter control sequences out of 15000+600000
+ 30914 strings out of 478864
+ 565202 string characters out of 2858518
+ 1292883 words of memory out of 3000000
+ 48327 multiletter control sequences out of 15000+600000
  412492 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  85i,16n,133p,1527b,806s stack positions out of 5000i,500n,10000p,200000b,80000s
 <C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Riley_Cody_Project_Report.pdf (7 pages, 221979 bytes).
+Output written on Riley_Cody_Project_Report.pdf (8 pages, 275513 bytes).
 PDF statistics:
- 117 PDF objects out of 1000 (max. 8388607)
- 16 named destinations out of 1000 (max. 500000)
- 76 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 124 PDF objects out of 1000 (max. 8388607)
+ 18 named destinations out of 1000 (max. 500000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 
