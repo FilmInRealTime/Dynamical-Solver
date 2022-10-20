@@ -92,15 +92,19 @@ In the GUI, we can see that we have entered three equations, three initial condi
     \caption{Image showing the input fields for the Dynamical Systems solver and the execute button. It also shows the numerically approximated solutions to the differential equations.}
     \label{GUI solution}
 \end{figure}
+There are a few things to note when using the application, when using functions like the exponential function or any trig functions, then the we need to define them using the numpy library. For example, say we wanted to enter $sin(x_{1})$, then in our entry field, we need to type np.sin($x_{1}$). You can easily replace $x_{1}$ with either the spatial parameter $t$ or one of the other variables,
 \chapter{The Development Phase}
 \section{Stages of Development}
 The development process of my dynamical system solver was relatively straightforward in the early stages of development. The first stage of development was to build a solid plan for what I planned to make. As discussed in my statement of intent, I wanted to develop an easy-to-use piece of software that would allow any user to input a set of first-order differential equations and have the python script approximate a solution to the corresponding dynamical system. In the early stages of planning, I thought it would be good to allow the user to input how many equations they would like to include in the solver. However, although the final build allows this to occur, it is more likely for bugs to occur, and the app becomes very tedious to use.
 \smallskip
 
-At first, I thought building such a program would be relatively straightforward, and I assumed I would have no issues. However, it proved more difficult than I anticipated, as I had to ensure that the correct number of equations were being generated alongside the number of variables. The name of the variables was also a challenge, and for simplicity, during the early stages of development, I decided to use the variable naming convention of $x_{n}$, where $n \in \mathbb{Z}^{+}$.
+At first, I thought building such a program would be relatively straightforward, and I assumed I would have no issues. However, it proved more difficult than I anticipated, as I had to ensure that the correct number of equations were being generated alongside the number of variables. 
 \section{Positive Outcomes}
 There were many positive outcomes in the development of my Dynamical Systems app. Firstly, I successfully allowed users to enter a system of $n$ equations in the terminal version of the application. The application automatically plots all $n$ solutions over a timespan that the user defined for both the GUI and terminal versions, so this is a successful outcome.
 \section{Challenging Parts of Development}
+The name of the variables was also a challenge, and for simplicity, during the early stages of development, I decided to use the variable naming convention of $x_{n}$, where $n \in \mathbb{Z}^{+}$.
+\smallskip
+
 Handling discontinuities of functions a user inputs was one of the biggest challenges in the development of the Python application. For example, say you had a simple one-dimensional problem, equivalent to
 \begin{equation*}
     \frac{dy}{dt} = \frac{1}{t} 
@@ -111,6 +115,15 @@ over a timespan of $[-5,5]$ (this is just the domain we will plot over). In this
     \includegraphics[scale = 0.35]{Demo 5.png}
 \end{figure}
 The development of the GUI portion of the project was all pretty tough as I was learning to use the tkinter library while creating the project. It took me sometime to implement basic features such as calling function when a button is pressed, and grabbing information from the entry fields. Ensuring that no dangerous code that can be executed by python's evaluate function was also a challenge which is yet to be resolved. This leaves a potential security flaw in the application.
+\smallskip
+
+One of the major bugs that was encountered was the plotting of solutions on our GUI after a solution had already been plotted. During the early stages of development of the GUI, when you tried to plot another graph on the interface, the new plot would be compressed into the remaining area of the canvas that matches the dimension of the figure (Figure \ref*{GUI_B}).
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.7]{bug.png}
+    \caption{Plot showing a bug in my project that compresses the second graph when plotted.}
+    \label{GUI_B}
+\end{figure}
 \section{Future Developments for the Project}
 I plan to work on this project further past the deadline. I just like to have projects to do in my spare time, and there are a few features I will be adding to my project. Firstly, I would like to add some functionality that I ran out of time to add. The plan was to give the user the option to add as many equations as they would like to solve the dynamical system. This would result in a much more complex system being solved. This functionality works in the terminal version of the program, however, I just ran out of time to give the GUI the ability to change how many equations the algorithm had to solve. I would also like to add the ability for the user to clear the current plot showing on the GUI, as this would result in better accessibility to the overall use of the tool. For example, at the moment, the current build of the Dynamical Systems Solver App only allows for you to plot a single graph on the canvas, and after plotting this graph you would have to overwrite the plot to obtain the next one. In-order to solve this issue, we could look at saving the plot or possibly generate a new tab to store the new plot.
 \smallskip
@@ -119,6 +132,8 @@ I would also like to implement a feature that gives the user key pieces of infor
 \smallskip
 
 Currently, the project allows the user to fit their solution to an initial condition, which in this case is defined to be the first point of the timespan. However, I'd also like to investigate if it is possible to have the user input the location of which they have information for the solution. For example, if we wanted to plot across the domain $[-5,5]$, and we have information at $t = 0$, then I would allow the user to input that information instead.
+\smallskip
 
+I believe that there are sections of code that can be made to be more efficient, especially in the GUI section of the program. For example, when creating the entry fields for the equations and the initial conditions, I believe a for loop could be used rather than explicitly rewriting the same code. 
 
 \end{document}

@@ -17,8 +17,8 @@ plot_status = False
 def print_statement():
     global canvas
     global plot_status
-    if plot_status == True:
-        clear(canvas)
+    # if plot_status == True:
+    #     clear(canvas)
     """Displays the equations inputted on the GUI app."""   
     f_eqn1 = equation_1.get()
     f_eqn2 = equation_2.get()
@@ -44,7 +44,7 @@ def print_statement():
     x,t = mn.main(equations,initial_conditions,bounds)
     
     #All the important information for the plot.
-    fig = Figure(figsize=(8,8), dpi = 100)
+    fig = Figure(figsize=(8,4), dpi = 100)
     plot1 = fig.add_subplot(111)
     plot1.set_xlabel("t")
     plot1.set_ylabel("Solution")
