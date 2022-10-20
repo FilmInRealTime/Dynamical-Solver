@@ -44,7 +44,7 @@ def print_statement():
     x,t = mn.main(equations,initial_conditions,bounds)
     
     #All the important information for the plot.
-    fig = Figure(figsize=(8,5), dpi = 100)
+    fig = Figure(figsize=(8,8), dpi = 100)
     plot1 = fig.add_subplot(111)
     plot1.set_xlabel("t")
     plot1.set_ylabel("Solution")

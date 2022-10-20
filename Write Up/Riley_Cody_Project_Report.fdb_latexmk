@@ -1,10 +1,10 @@
 # Fdb version 3
-["biber Riley_Cody_Project_Report"] 1666225765 "Riley_Cody_Project_Report.bcf" "Riley_Cody_Project_Report.bbl" "Riley_Cody_Project_Report" 1666225826
-  "Riley_Cody_Project_Report.bcf" 1666225825 106509 9a67570959d3e9b03538ee487046cabb "pdflatex"
+["biber Riley_Cody_Project_Report"] 1666227975 "Riley_Cody_Project_Report.bcf" "Riley_Cody_Project_Report.bbl" "Riley_Cody_Project_Report" 1666228480
+  "Riley_Cody_Project_Report.bcf" 1666228480 106509 9a67570959d3e9b03538ee487046cabb "pdflatex"
   (generated)
   "Riley_Cody_Project_Report.bbl"
   "Riley_Cody_Project_Report.blg"
-["pdflatex"] 1666225822 "e:/University Files/2022/Dynamical-Solver/Write Up/Riley_Cody_Project_Report.tex" "Riley_Cody_Project_Report.pdf" "Riley_Cody_Project_Report" 1666225826
+["pdflatex"] 1666228477 "e:/University Files/2022/Dynamical-Solver/Write Up/Riley_Cody_Project_Report.tex" "Riley_Cody_Project_Report.pdf" "Riley_Cody_Project_Report" 1666228480
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233951848 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1233951854 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -199,16 +199,17 @@
   "C:/Program Files/MiKTeX/tex/latex/zref/zref-base.sty" 1602241898 20688 beaddf14d96104d4bf016523be5395c5 ""
   "C:/Users/codyp/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1630808512 9732993 d1ca2c5d20b3670b46238fceed240408 ""
   "C:/Users/codyp/AppData/Local/MiKTeX/pdftex/config/pdftex.map" 1630805456 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
-  "Riley_Cody_Project_Report.aux" 1666225825 5343 74b9e30a6996a78359d3bd5dc049322a "pdflatex"
-  "Riley_Cody_Project_Report.bbl" 1666225766 486 f7f239c736cf01ac6ce7bd829f9b3c7b "biber Riley_Cody_Project_Report"
-  "Riley_Cody_Project_Report.run.xml" 1666225825 2452 231b4e52510bbf678a534841cb8a5d9c "pdflatex"
-  "Riley_Cody_Project_Report.tex" 1666225822 8128 d5082c5f73bd725b0d81ee04bdd0d9d2 ""
+  "Demo 4.png" 1666228031 89800 baede3be220f0d49c71d9e18fd354a30 ""
+  "Riley_Cody_Project_Report.aux" 1666228480 5572 577fe14b997d92f0f4cd5920222d45df "pdflatex"
+  "Riley_Cody_Project_Report.bbl" 1666227976 486 f7f239c736cf01ac6ce7bd829f9b3c7b "biber Riley_Cody_Project_Report"
+  "Riley_Cody_Project_Report.run.xml" 1666228480 2452 231b4e52510bbf678a534841cb8a5d9c "pdflatex"
+  "Riley_Cody_Project_Report.tex" 1666228475 8666 a9d0dad466e20d7a061739edeaf97466 ""
   "demo 1.png" 1666223826 11252 579f25b782059e155a58d57d8134ef59 ""
   "demo 2.png" 1666223845 48860 28e70bd2aa12d832d26efda4df874e3d ""
-  "e:/University Files/2022/Dynamical-Solver/Write Up/Riley_Cody_Project_Report.tex" 1666225822 8128 d5082c5f73bd725b0d81ee04bdd0d9d2 ""
+  "e:/University Files/2022/Dynamical-Solver/Write Up/Riley_Cody_Project_Report.tex" 1666228475 8666 a9d0dad466e20d7a061739edeaf97466 ""
   (generated)
-  "Riley_Cody_Project_Report.pdf"
   "Riley_Cody_Project_Report.log"
-  "Riley_Cody_Project_Report.aux"
+  "Riley_Cody_Project_Report.pdf"
   "Riley_Cody_Project_Report.run.xml"
   "Riley_Cody_Project_Report.bcf"
+  "Riley_Cody_Project_Report.aux"

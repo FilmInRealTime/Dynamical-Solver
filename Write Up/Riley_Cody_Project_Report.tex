@@ -83,7 +83,13 @@ We will consider a basic example for our calculation. We will consider the case 
         \frac{dx_{2}}{dt} &= x_{1} - x_{2}
     \end{split}
 \end{equation*}
-
+The initial conditions that we will solve for is $x_{1}(-5) = 1$ and $x_{2}(-5) = 1$. We will also be taking $k = 100$, so the size of our intervals will be $\frac{1}{10}$. As a result, we obtain the numerical solution
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.36]{Demo 4.png}
+    \caption{Plot showing the solution of our dynamical system}
+\end{figure}
+The functions that were selected for this demonstration behaved fairly well, and we managed to obtain a well-behaved solution for our differential equation.
 \section*{GUI Version}
 The graphical user interface version of the dynamical system solver application is much more accessible and easier to use compared to the terminal version. Throughout this section of my report, I will explain how to use the GUI version of my project with a worked example.
 \begin{figure}[H]

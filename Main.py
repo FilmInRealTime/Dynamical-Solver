@@ -118,11 +118,14 @@ def eulers_method(x0,t,h,en,id,variables):
 
 def plot_solution(t,x):
     """This function plots the information that the user would like to know"""
-    plt.plot(t,x)
+    plt.rc('font', size = 20)
+    for i in range(len(x[0])):
+        plt.plot(t,x[:,i], label = f'Solution to x{i}',linewidth = 3)
+    plt.legend()
     plt.xlabel('t')
-    plt.ylabel('y')
+    plt.ylabel('Solution to differential')
     plt.grid()
-    plt.title("Plot showing the solution to the system of ODEs")
+    plt.title("Plot showing the solution to the system of ODEs", size = 20)
     plt.show()
 
 
