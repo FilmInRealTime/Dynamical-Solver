@@ -99,7 +99,7 @@ The development process of my dynamical system solver was relatively straightfor
 
 At first, I thought building such a program would be relatively straightforward, and I assumed I would have no issues. However, it proved more difficult than I anticipated, as I had to ensure that the correct number of equations were being generated alongside the number of variables. The name of the variables was also a challenge, and for simplicity, during the early stages of development, I decided to use the variable naming convention of $x_{n}$, where $n \in \mathbb{Z}^{+}$.
 \section{Positive Outcomes}
-There were many positive outcomes in the development of my Dynamical Systems app. Firstly, I successfully allowed users to enter a system of $n$ equations in the terminal version of the application.
+There were many positive outcomes in the development of my Dynamical Systems app. Firstly, I successfully allowed users to enter a system of $n$ equations in the terminal version of the application. The application automatically plots all $n$ solutions over a timespan that the user defined for both the GUI and terminal versions, so this is a successful outcome.
 \section{Challenging Parts of Development}
 Handling discontinuities of functions a user inputs was one of the biggest challenges in the development of the Python application. For example, say you had a simple one-dimensional problem, equivalent to
 \begin{equation*}
@@ -110,10 +110,15 @@ over a timespan of $[-5,5]$ (this is just the domain we will plot over). In this
     \centering
     \includegraphics[scale = 0.35]{Demo 5.png}
 \end{figure}
-The development of the GUI portion of the project was all pretty tough as I was learning to use the tkinter library while creating the project. It took me sometime to implement basic features such as calling function when a button is pressed, and grabbing information from the entry fields.
+The development of the GUI portion of the project was all pretty tough as I was learning to use the tkinter library while creating the project. It took me sometime to implement basic features such as calling function when a button is pressed, and grabbing information from the entry fields. Ensuring that no dangerous code that can be executed by python's evaluate function was also a challenge which is yet to be resolved. This leaves a potential security flaw in the application.
 \section{Future Developments for the Project}
 I plan to work on this project further past the deadline. I just like to have projects to do in my spare time, and there are a few features I will be adding to my project. Firstly, I would like to add some functionality that I ran out of time to add. The plan was to give the user the option to add as many equations as they would like to solve the dynamical system. This would result in a much more complex system being solved. This functionality works in the terminal version of the program, however, I just ran out of time to give the GUI the ability to change how many equations the algorithm had to solve. I would also like to add the ability for the user to clear the current plot showing on the GUI, as this would result in better accessibility to the overall use of the tool. For example, at the moment, the current build of the Dynamical Systems Solver App only allows for you to plot a single graph on the canvas, and after plotting this graph you would have to overwrite the plot to obtain the next one. In-order to solve this issue, we could look at saving the plot or possibly generate a new tab to store the new plot.
+\smallskip
 
+I would also like to implement a feature that gives the user key pieces of information about the solution that they obtain. For example, if we had a solution that had multiple roots, then I'd like to allow the user to get the exact approximate information around where that occurs. This could possibly be done using Newton's method, a method that we covered in module 10 of the course. Although the solution we have is not exact, it is close enough to approximate such pieces of information.
+\smallskip
+
+Currently, the project allows the user to fit their solution to an initial condition, which in this case is defined to be the first point of the timespan. However, I'd also like to investigate if it is possible to have the user input the location of which they have information for the solution. For example, if we wanted to plot across the domain $[-5,5]$, and we have information at $t = 0$, then I would allow the user to input that information instead.
 
 
 \end{document}
