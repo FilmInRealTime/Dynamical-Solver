@@ -1229,6 +1229,20 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
+INPUT .\demo 1.png
+INPUT .\demo 1.png
+INPUT demo 1.png
+INPUT .\demo 1.png
+INPUT .\demo 1.png
+INPUT .\demo 1.png
+INPUT .\demo 1.png
+INPUT .\demo 2.png
+INPUT .\demo 2.png
+INPUT demo 2.png
+INPUT .\demo 2.png
+INPUT .\demo 2.png
+INPUT .\demo 2.png
+INPUT .\demo 2.png
 INPUT Riley_Cody_Project_Report.aux
 INPUT Riley_Cody_Project_Report.run.xml
 OUTPUT Riley_Cody_Project_Report.run.xml

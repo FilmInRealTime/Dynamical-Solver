@@ -24,7 +24,7 @@ def DE_formation():
         equation_names.append("dx{0}dt".format(j))
         
     print(f"Your differential equations are named {equation_names}")
-    return lower_bound,upper_bound, variables, equation_names
+    return variables, equation_names
 
     
 
@@ -108,9 +108,11 @@ def plot_solution(t,x):
     plt.show()
  
 
-def main(equations,initial_conditions):
+def main(equations,initial_conditions,bounds):
     """The main function wraps all the other define functions into a line of processes"""
-    lower_bound, upper_bound, variables, equation_names = DE_formation()
+    variables, equation_names = DE_formation()
+    lower_bound,upper_bound = bounds
+    print(lower_bound)
     #Note to self, I think I could simplify this down onto one line and have a list containing the required strings.
     #The linspace function from the numpy package defines the grid for which we will be plotting on.
     h = 1/(1+66)

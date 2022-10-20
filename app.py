@@ -1,6 +1,7 @@
 from cgitb import text
 from re import L
 from tkinter import *
+from tokenize import String
 #We call the file GUI_main python script into our GUI interface so we can solve our ODEs.
 import GUI_main as mn
 from matplotlib.figure import Figure
@@ -31,11 +32,16 @@ def print_statement():
     ic3 = initial_3.get()
     #We combine the initial conditions for the problems we wish solve, matching the position in the list to the cooresponding equation
     initial_conditions = [ic1,ic2,ic3]
+    #Defines the bounds of our function
+    lower_bound = float(lb.get())
+    upper_bound = float(ub.get())
+    bounds = [lower_bound,upper_bound]
+
     #Temporary test to ensure all fields are being grabbed
     print(f"Equation: {f_eqn1} with x1 = {ic1}")
     print(f"Equation: {f_eqn2} with x2 = {ic2}")
     print(f"Equation: {f_eqn3} with x3 = {ic3}")
-    x,t = mn.main(equations,initial_conditions)
+    x,t = mn.main(equations,initial_conditions,bounds)
     
     #All the important information for the plot.
     fig = Figure(figsize=(8,5), dpi = 100)
@@ -76,39 +82,51 @@ initial_2 = StringVar()
 equation_3 = StringVar()
 initial_3 = StringVar()
 
+lb = StringVar()
+ub = StringVar()
+
 
 Font = ("Times New Roman", 20, "bold")
 
 #The following code sets up a grid holding the structure the GUI
-
+text= 'This app assumes you are solving \n a dynamical system using three equations.'
 frame = Frame(display_app)
 #Creates the required input from the user for the first equation
-Label(frame,text = 'Please Enter dx1dt: ',font = Font).grid(row = 0, column=0,sticky = 'w')
+Label(frame,text = f'{text}',font = Font).grid(row = 0, columnspan=3,sticky = 'w')
+
+Label(frame,text = 'Please Enter dx1dt: ',font = Font).grid(row = 1, column=0,sticky = 'w')
 eqn1 = Entry(frame,width = 25, textvariable=equation_1 )
-eqn1.grid(row = 0, column= 1)
-Label(frame,text = 'x1: ',font = Font).grid(row = 0, column=2,sticky = 'w')
+eqn1.grid(row = 1, column= 1)
+Label(frame,text = 'x1: ',font = Font).grid(row = 1, column=2,sticky = 'w')
 inital_con1 = Entry(frame,width = 10,textvariable= initial_1)
-inital_con1.grid(row = 0, column= 3)
+inital_con1.grid(row = 1, column= 3)
 
 
 #Creates the required input from the user for the second equation
-Label(frame,text = 'Please Enter dx2dt: ',font = Font).grid(row = 1, column=0,sticky = 'w')
+Label(frame,text = 'Please Enter dx2dt: ',font = Font).grid(row = 2, column=0,sticky = 'w')
 eqn2 = Entry(frame,width = 25,textvariable = equation_2)
-eqn2.grid(row = 1, column= 1)
-Label(frame,text = 'x2: ',font = Font).grid(row = 1, column=2,sticky = 'w')
+eqn2.grid(row = 2, column= 1)
+Label(frame,text = 'x2: ',font = Font).grid(row = 2, column=2,sticky = 'w')
 inital_con2 = Entry(frame,width = 10,textvariable= initial_2)
-inital_con2.grid(row = 1, column= 3)
+inital_con2.grid(row = 2, column= 3)
 
 
 #Creates the required input from the user for the third equation
-Label(frame,text = 'Please Enter dx3dt: ',font = Font).grid(row = 2, column=0,sticky = 'w')
+Label(frame,text = 'Please Enter dx3dt: ',font = Font).grid(row = 3, column=0,sticky = 'w')
 eqn3 = Entry(frame,width = 25,textvariable=equation_3)
-eqn3.grid(row = 2, column= 1)
-Label(frame,text = 'x3: ',font = Font).grid(row = 2, column=2,sticky = 'w')
+eqn3.grid(row = 3, column= 1)
+Label(frame,text = 'x3: ',font = Font).grid(row = 3, column=2,sticky = 'w')
 inital_con3 = Entry(frame,width = 10,textvariable= initial_3)
-inital_con3.grid(row = 2, column= 3)
+inital_con3.grid(row = 3, column= 3)
 
-Button(frame, text = 'Solve Dynamical System', command = print_statement).grid(row = 3, columnspan=4,sticky='ew')
+Label(frame,text = 'Bounds: ',font = Font).grid(row = 4, column=0,sticky = 'w')
+lower_bound = Entry(frame,width = 10,textvariable=lb)
+lower_bound.grid(row = 4,column = 1,sticky = 'w')
+
+upper_bound = Entry(frame,width = 10,textvariable=ub)
+upper_bound.grid(row = 4,column = 2,sticky = 'w')
+
+Button(frame, text = 'Solve Dynamical System', command = print_statement).grid(row = 5, columnspan=4,sticky='ew')
 
 
 

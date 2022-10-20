@@ -76,10 +76,27 @@ The user will then be prompted with a statement saying that they are solving a d
 
 The final step that we need to take is to enter the number of steps we wish to use to numerically approximate a solution to the dynamical system. This will then be used to split our time span into $k$ sub intervals. 
 \section*{Example Calculation}
-We will consider a basic example for our calculation. We will consider the case where the number of equations we enter is $n = 2$. The timespan that we will be considering is $\mathbb{T} = [-5,5]$ which means the lower bound is $-5$ and the upper bound is $5$.
+We will consider a basic example for our calculation. We will consider the case where the number of equations we enter is $n = 2$. The timespan that we will be considering is $\mathbb{T} = [-5,5]$ which means the lower bound is $-5$ and the upper bound is $5$. We will then enter our equations which will be 
+\begin{equation*}
+    \begin{split}
+        \frac{dx_{1}}{dt} &= 1 - x_{1} + x_{2} \\
+        \frac{dx_{2}}{dt} &= x_{1} - x_{2}
+    \end{split}
+\end{equation*}
 
 \section*{GUI Version}
-The graphical user interface version of the dynamical system solver application is much more accessible and easier to use compared to the terminal version.
+The graphical user interface version of the dynamical system solver application is much more accessible and easier to use compared to the terminal version. Throughout this section of my report, I will explain how to use the GUI version of my project with a worked example.
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.8]{demo 1.png}
+    \caption{Image showing the input fields for the Dynamical Systems solver and the execute button.}
+\end{figure}
+In the GUI, we can see that we have entered three equations, three initial conditions, and the bounds. These fields are strictly required, otherwise the python script that handles all the technical calculations require all the pieces of information. The equations that we input into the fields adjacent to the label 'Please Enter $dx_{n}dt$' are required to use only the variables $t$, $x_{1}$, $x_{2}$, and $x_{3}$. If any other variables are detected that are not defined, then the calculation will cease and an error will be displayed in the terminal. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.7]{demo 2.png}
+    \caption{Image showing the input fields for the Dynamical Systems solver and the execute button. It also shows the numerically approximated solutions to the differential equations.}
+\end{figure}
 
 
 
